@@ -25,25 +25,57 @@ dossier-<zaaknaam>/
   stukken/            ← de originele bestanden (contract, facturen, mails, …)
 ```
 
-## Werkwijze
+## Eerst compleet uitvragen, dan pas schrijven (belangrijk)
 
-1. **Verzamel de kern** (uit de intake, of vraag kort na als er iets ontbreekt):
-   partijen, korte omschrijving, chronologische **tijdlijn**, wat de ondernemer wil
-   bereiken, de **rechtsvraag** in één zin, de aanwezige stukken, en de triage-kleur.
-2. **Onderbouw met bronnen.** De relevante wetsartikelen en eventuele richtinggevende
+**Harde regel:** je schrijft pas een bestand (`voorblad.md` of `dossier.json`) als je álle
+benodigde gegevens hebt. De ondernemer krijgt **nooit** een bestand terug met technische
+placeholders (`{{…}}`) of lege verplichte velden — hij kent JSON niet en hoort niets in een
+bestand te hoeven invullen. Het invullen doe jij, op basis van wat je hebt uitgevraagd.
+
+Loop daarom **eerst**, in de adaptieve interviewstijl (kort, rustig, één ding tegelijk), de
+onderstaande punten langs en verzamel wat nog ontbreekt. Veel komt al uit de zaak-intake;
+vraag alleen na wat je nog niet zeker weet. Vuur het niet af als formulier — stel gerichte
+vervolgvragen.
+
+**Uit te vragen / te bevestigen vóór je schrijft:**
+- **partijen** (namen en rollen);
+- de chronologische **tijdlijn** met data;
+- wat de ondernemer wil bereiken (**gewenste uitkomst**);
+- welke **stukken** er zijn en waar ze staan;
+- eventuele **termijnen/deadlines**;
+- de **rechtsvraag** in één zin (die formuleer jij, ter bevestiging aan de ondernemer).
+
+Bevestig kort dat je genoeg hebt ("Ik heb genoeg om je dossier op te bouwen — ik zet het nu
+voor je klaar") vóór je gaat schrijven.
+
+## Werkwijze (pas ná de uitvraag)
+
+1. **Onderbouw met bronnen.** De relevante wetsartikelen en eventuele richtinggevende
    uitspraken zoek je op via de tools en neem je op mét `bron_url`. Nooit een vindplaats
-   verzinnen — liever `[nog opzoeken]`.
-3. **Schrijf het `voorblad.md`** met het template `templates/voorblad.md` — dit is wat een
-   advocaat als eerste leest: samenvatting, partijen, tijdlijn, rechtsvraag, gewenste
-   uitkomst, overzicht stukken, geraadpleegde bronnen.
-4. **Schrijf `dossier.json`** volgens `templates/dossier.schema.json` — dezelfde inhoud
-   machineleesbaar, met `"formaat": "lawbot-dossier/1.0"`. Dit is de laag die **LawBot Pro
-   herkent en direct inleest** (de advocaat hoeft niets over te typen).
-5. **Kopieer de stukken** naar `stukken/` (of noteer waar ze staan als de ondernemer ze
-   niet wil verplaatsen) en zet ze in `dossier.json` onder `stukken` met een korte duiding.
-6. **Exporteer het voorblad** desgevraagd naar Word of PDF (docx-/pdf-skill) in de
+   verzinnen — een ontbrekende bron is een open punt, geen verzinsel.
+2. **Schrijf het `voorblad.md`** met het template `templates/voorblad.md` als skelet, maar
+   lever het **volledig ingevuld** op: vervang elke `{{placeholder}}` door de echte gegevens.
+   Dit is wat een advocaat als eerste leest: samenvatting, partijen, tijdlijn, rechtsvraag,
+   gewenste uitkomst, overzicht stukken, geraadpleegde bronnen.
+3. **Schrijf `dossier.json`** volgens `templates/dossier.schema.json`, óók **volledig
+   ingevuld en zonder placeholders**, met `"formaat": "lawbot-dossier/1.0"`. Dit is de laag
+   die **LawBot Pro herkent en direct inleest** (de advocaat hoeft niets over te typen).
+4. **Kopieer de stukken** naar `stukken/` (of noteer waar ze staan als de ondernemer ze niet
+   wil verplaatsen) en zet ze in `dossier.json` onder `stukken` met een korte duiding.
+5. **Exporteer het voorblad** desgevraagd naar Word of PDF (docx-/pdf-skill) in de
    outputs-map, zodat de ondernemer het kan mailen. Buiten Cowork: lever nette markdown +
    meld dat export in Cowork kan.
+
+## Wat als iets écht onbekend blijft
+
+Zet het niet als rauwe placeholder in het bestand, maar als **open punt in gewone taal**:
+- in `voorblad.md` onder "Openstaande punten voor de advocaat" ("Nog aan te leveren: de
+  ondertekende versie van de overeenkomst");
+- in `dossier.json` in de `open_punten`-array (laat het betreffende veld leeg of weg — nooit
+  een placeholder-tekst als waarde).
+
+Zo krijgt de ondernemer altijd een compleet, leesbaar dossier en nooit huiswerk in een
+bestand dat hij niet begrijpt.
 
 ## Oplevering aan de ondernemer
 
