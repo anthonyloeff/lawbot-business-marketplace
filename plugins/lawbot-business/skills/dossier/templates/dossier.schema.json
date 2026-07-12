@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://litic.ai/schemas/lawbot-dossier-1.0.json",
+  "title": "LawBot-dossier",
+  "description": "Machineleesbaar dossier dat LawBot Business opbouwt en LawBot Pro (skill analyseer) direct kan inlezen. Bevat GEEN persoonsgegevens die niet strikt nodig zijn; dit bestand leeft bij de ondernemer, niet op de server.",
+  "type": "object",
+  "required": ["formaat", "aangemaakt_op", "zaak", "partijen", "rechtsvraag", "tijdlijn", "stukken", "triage"],
+  "properties": {
+    "formaat": {
+      "const": "lawbot-dossier/1.0",
+      "description": "Herkenningsmarker. LawBot Pro's analyseer-skill leest dit veld om het dossier te herkennen."
+    },
+    "aangemaakt_op": { "type": "string", "description": "ISO-datum waarop het dossier is samengesteld." },
+    "bijgewerkt_op": { "type": "string", "description": "ISO-datum van de laatste aanvulling." },
+    "opgesteld_met": { "type": "string", "default": "LawBot Business (Litic.ai)" },
+    "zaak": {
+      "type": "object",
+      "required": ["titel", "omschrijving", "rechtsgebied"],
+      "properties": {
+        "titel": { "type": "string", "description": "Korte werktitel, bijv. 'Onbetaalde facturen leverancier X'." },
+        "omschrijving": { "type": "string", "description": "Kern van de zaak in enkele zinnen, feitelijk." },
+        "rechtsgebied": { "type": "string", "description": "Bijv. 'contractenrecht', 'arbeidsrecht', 'incasso', 'huurrecht bedrijfsruimte'." },
+        "gewenste_uitkomst": { "type": "string", "description": "Wat de ondernemer wil bereiken." }
+      }
+    },
+    "partijen": {
+      "type": "array",
+      "description": "Betrokken partijen.",
+      "items": {
+        "type": "object",
+        "required": ["rol", "naam"],
+        "properties": {
+          "rol": { "type": "string", "description": "Bijv. 'onderneming (cliënt)', 'wederpartij', 'werknemer', 'leverancier'." },
+          "naam": { "type": "string" },
+          "toelichting": { "type": "string" }
+        }
+      }
+    },
+    "rechtsvraag": { "type": "string", "description": "De juridische kernvraag in één zin." },
+    "tijdlijn": {
+      "type": "array",
+      "description": "Chronologische, puur feitelijke gebeurtenissen.",
+      "items": {
+        "type": "object",
+        "required": ["datum", "gebeurtenis"],
+        "properties": {
+          "datum": { "type": "string", "description": "ISO-datum of zo precies als bekend." },
+          "gebeurtenis": { "type": "string" },
+          "stuk_ref": { "type": "string", "description": "Optionele verwijzing naar een bestand in stukken[]." }
+        }
+      }
+    },
+    "termijnen": {
+      "type": "array",
+      "description": "Relevante deadlines/verjaring — puur informatief, geen bewaking op de server.",
+      "items": {
+        "type": "object",
+        "required": ["omschrijving", "datum"],
+        "properties": {
+          "omschrijving": { "type": "string" },
+          "datum": { "type": "string" },
+          "bron": { "type": "string", "description": "Grondslag, bijv. wetsartikel of contractclausule." }
+        }
+      }
+    },
+    "stukken": {
+      "type": "array",
+      "description": "Bewijsstukken. De bestanden zelf staan in de map stukken/.",
+      "items": {
+        "type": "object",
+        "required": ["bestandsnaam", "soort"],
+        "properties": {
+          "bestandsnaam": { "type": "string" },
+          "soort": { "type": "string", "description": "Bijv. 'overeenkomst', 'factuur', 'e-mail', 'app-gesprek'." },
+          "duiding": { "type": "string", "description": "Waarom dit stuk relevant is." },
+          "datum": { "type": "string" }
+        }
+      }
+    },
+    "bronnen": {
+      "type": "array",
+      "description": "Geraadpleegde officiële bronnen. Uitsluitend uit tool-output, altijd met bron_url.",
+      "items": {
+        "type": "object",
+        "required": ["type", "aanduiding", "bron_url"],
+        "properties": {
+          "type": { "type": "string", "enum": ["wetsartikel", "uitspraak", "eu", "tuchtrecht", "overig"] },
+          "aanduiding": { "type": "string", "description": "Bijv. 'art. 6:265 BW' of 'ECLI:NL:HR:2023:1371'." },
+          "relevantie": { "type": "string" },
+          "bron_url": { "type": "string" }
+        }
+      }
+    },
+    "triage": {
+      "type": "object",
+      "required": ["kleur", "toelichting"],
+      "properties": {
+        "kleur": { "type": "string", "enum": ["groen", "oranje", "rood"] },
+        "toelichting": { "type": "string", "description": "Waarom deze inschatting." },
+        "advies": { "type": "string", "description": "Zelf doen / advocaat erbij / direct advocaat." }
+      }
+    },
+    "open_punten": {
+      "type": "array",
+      "description": "Wat de advocaat nog moet uitzoeken of wat de ondernemer nog moet aanleveren.",
+      "items": { "type": "string" }
+    },
+    "disclaimer": {
+      "type": "string",
+      "default": "Opgesteld door de ondernemer met LawBot Business (Litic.ai). Geen juridisch advies; ter voorbereiding op advocaatbijstand."
+    }
+  }
+}

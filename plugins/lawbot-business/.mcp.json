@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "lawbot-business": {
+      "type": "http",
+      "url": "https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.license_key:-}"
+      },
+      "timeout": 120000,
+      "alwaysLoad": true
+    }
+  }
+}
