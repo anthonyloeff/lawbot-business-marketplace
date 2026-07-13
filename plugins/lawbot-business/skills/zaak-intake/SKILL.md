@@ -5,6 +5,9 @@ description: Zaak-intake met eerlijke triage voor de MKB-ondernemer — stelt é
 
 # Zaak-intake & triage
 
+> Tip: de `werkstroom`-tool (aanroepen zonder naam) geeft het actuele keuzemenu van het
+> pakket — gebruik die lijst voor het vervolg-aanbod na het oordeel.
+
 Dit is de **motor** van LawBot Business: een kort interview dat de zaak scherp krijgt en
 eindigt in een eerlijk oordeel — kun je dit zelf, of heb je een advocaat nodig? Werk in de
 adaptieve toon en met de vangrails uit de kern-skill `lawbot-business`.

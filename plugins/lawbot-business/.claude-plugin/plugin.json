@@ -1,13 +1,26 @@
 {
   "name": "lawbot-business",
   "displayName": "LawBot Business",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Juridische assistent voor MKB-ondernemers. Bespaart advocaatkosten door eerlijke triage (wanneer heb je écht een advocaat nodig?) en door je zaak advocaat-klaar voor te bereiden: zaak-intake, dossieropbouw met export, brieven & sommaties, en contract-/voorwaardencheck — op officiële Nederlandse bronnen met verifieerbare links. Vereist een LawBot Business-licentie van Litic.ai (14 dagen gratis proef).",
-  "author": { "name": "Litic.ai", "email": "anthony@litic.ai", "url": "https://litic.ai" },
+  "author": {
+    "name": "Litic.ai",
+    "email": "anthony@litic.ai",
+    "url": "https://litic.ai"
+  },
   "homepage": "https://portal.litic.ai",
   "repository": "https://github.com/anthonyloeff/lawbot-business-marketplace",
   "license": "SEE LICENSE IN LICENSE",
-  "keywords": ["juridisch", "mkb", "ondernemer", "contract", "incasso", "arbeidsrecht", "nederlands-recht", "dossier"],
+  "keywords": [
+    "juridisch",
+    "mkb",
+    "ondernemer",
+    "contract",
+    "incasso",
+    "arbeidsrecht",
+    "nederlands-recht",
+    "dossier"
+  ],
   "mcpServers": "./.mcp.json",
   "userConfig": {
     "license_key": {

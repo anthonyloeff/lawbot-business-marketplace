@@ -12,6 +12,11 @@ begrijpen. Werk in de adaptieve toon van `lawbot-business`.
 
 ## Werkwijze
 
+0. **Roep eerst de `werkstroom`-tool aan** (naam: `contract-check`, of `av-check` voor
+   algemene voorwaarden, of `onderhandeling` voor het tegenvoorstel) — die levert de
+   actuele checklist en diepte-instructies van de server. De stappen hieronder blijven
+   de vaste kern.
+
 1. **Lees het volledige document** dat de ondernemer aanlevert (upload, plak of `url_ophalen`
    voor een link/PDF). Vat éérst in twee zinnen samen wat voor document het is en wat het
    in de kern regelt — zodat hij weet dat je het goed hebt.

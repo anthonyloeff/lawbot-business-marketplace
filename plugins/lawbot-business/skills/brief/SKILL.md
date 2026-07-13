@@ -10,6 +10,10 @@ adaptieve toon van de kern-skill `lawbot-business` en houd de vangrails aan.
 
 ## Werkwijze
 
+0. **Roep eerst de `werkstroom`-tool aan** (naam: `brief-aanmaning`, `brief-sommatie` of
+   `brief-reactie-claim`, of `incasso` voor de hele ladder) — die levert het actuele
+   sjabloon en de vangrails van de server. De stappen hieronder blijven de vaste kern.
+
 1. **Bepaal het brieftype** en gebruik het bijbehorende template uit `templates/`:
    - `aanmaning.md` — vriendelijk-zakelijk betalingsverzoek (eerste stap bij een onbetaalde
      factuur).

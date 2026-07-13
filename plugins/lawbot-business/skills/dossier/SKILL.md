@@ -50,6 +50,11 @@ voor je klaar") vóór je gaat schrijven.
 
 ## Werkwijze (pas ná de uitvraag)
 
+0. **Roep eerst de `werkstroom`-tool aan** (naam: `dossier-advocaat`) — die levert het
+   actuele formaat, het exportpakket en de vangrails van de server. De stappen hieronder
+   blijven de vaste kern. (Meldt de tool dat het dossier niet in het pakket zit, leg dat
+   vriendelijk uit.)
+
 1. **Onderbouw met bronnen.** De relevante wetsartikelen en eventuele richtinggevende
    uitspraken zoek je op via de tools en neem je op mét `bron_url`. Nooit een vindplaats
    verzinnen — een ontbrekende bron is een open punt, geen verzinsel.
