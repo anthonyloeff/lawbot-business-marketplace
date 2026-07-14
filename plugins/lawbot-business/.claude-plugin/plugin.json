@@ -1,7 +1,7 @@
 {
   "name": "lawbot-business",
   "displayName": "LawBot Business",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Juridische assistent voor MKB-ondernemers. Bespaart advocaatkosten door eerlijke triage (wanneer heb je écht een advocaat nodig?) en door je zaak advocaat-klaar voor te bereiden: zaak-intake, dossieropbouw met export, brieven & sommaties, en contract-/voorwaardencheck — op officiële Nederlandse bronnen met verifieerbare links. Vereist een LawBot Business-licentie van Litic.ai (14 dagen gratis proef).",
   "author": {
     "name": "Litic.ai",
