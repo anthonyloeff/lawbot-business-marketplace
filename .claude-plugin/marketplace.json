@@ -5,7 +5,7 @@
     {
       "name": "lawbot-business",
       "source": "./plugins/lawbot-business",
-      "description": "Juridische assistent voor MKB-ondernemers: weet wanneer je een advocaat nodig hebt en bereidt je zaak zó voor dat de advocaat direct kan beginnen (en de helft goedkoper uit is). Zaak-intake met eerlijke triage, dossieropbouw, brieven & sommaties en contract-/voorwaardencheck — op officiële Nederlandse bronnen. Abonnement vereist (14 dagen gratis proef via portal.litic.ai).",
+      "description": "Juridische assistent voor MKB-ondernemers: weet wanneer je een advocaat nodig hebt en bereidt je zaak zó voor dat de advocaat direct kan beginnen (en de helft goedkoper uit is). Zaak-intake met eerlijke triage, dossieropbouw, brieven & sommaties en contract-/voorwaardencheck — op officiële Nederlandse bronnen. Abonnement vereist (14 dagen gratis proef via lawbot.nl/business).",
       "category": "legal"
     }
   ]

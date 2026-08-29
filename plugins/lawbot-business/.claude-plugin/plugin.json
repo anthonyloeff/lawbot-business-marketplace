@@ -1,14 +1,14 @@
 {
   "name": "lawbot-business",
   "displayName": "LawBot Business",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Juridische assistent voor MKB-ondernemers. Bespaart advocaatkosten door eerlijke triage (wanneer heb je écht een advocaat nodig?) en door je zaak advocaat-klaar voor te bereiden: zaak-intake, dossieropbouw met export, brieven & sommaties, en contract-/voorwaardencheck — op officiële Nederlandse bronnen met verifieerbare links. Vereist een LawBot Business-licentie van Litic.ai (14 dagen gratis proef).",
   "author": {
     "name": "Litic.ai",
     "email": "anthony@litic.ai",
     "url": "https://litic.ai"
   },
-  "homepage": "https://portal.litic.ai",
+  "homepage": "https://lawbot.nl/business",
   "repository": "https://github.com/anthonyloeff/lawbot-business-marketplace",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
@@ -26,7 +26,7 @@
     "license_key": {
       "type": "string",
       "title": "LawBot Business licentiesleutel (alleen voor Claude Code CLI)",
-      "description": "Gebruik je LawBot Business in Claude Code (terminal)? Plak dan hier je licentiesleutel (lbb_…) van https://portal.litic.ai. Op claude.ai en in Cowork hoeft dit niet: daar verbind je de connector en log je in via de portal.",
+      "description": "Gebruik je LawBot Business in Claude Code (terminal)? Plak dan hier je licentiesleutel (lbb_…) van https://lawbot.nl/business. Op claude.ai en in Cowork hoeft dit niet: daar verbind je de connector en log je in via de portal.",
       "sensitive": true,
       "required": false
     }
