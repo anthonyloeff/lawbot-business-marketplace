@@ -21,14 +21,14 @@ verifieerbare links. Je dossier blijft van jou: de server slaat geen inhoud op.
 In Claude: **Customize → Plugins** → **+** → *Add marketplace* → *Add from a repository* →
 `anthonyloeff/lawbot-business-marketplace`, en installeer **LawBot Business**.
 
-Daarna: start je gratis proef van 14 dagen op **https://portal.litic.ai** en verbind de
+Daarna: start je gratis proef van 14 dagen op **https://lawbot.nl/business** en verbind de
 connector (op claude.ai/Cowork) of plak je `lbb_`-sleutel in de plugin-instellingen
 (Claude Code terminal).
 
 ## Voor wie dit niet is
 
 LawBot Business is voor **ondernemers**, niet voor advocaten. Ben je advocaat? Dan is
-**[LawBot Pro](https://portal.litic.ai)** de juiste tool. De twee sluiten op elkaar aan.
+**[LawBot Pro](https://lawbot.nl)** de juiste tool. De twee sluiten op elkaar aan.
 
 ---
 *LawBot Business geeft juridische informatie en voorbereiding, geen juridisch advies. — Litic.ai*

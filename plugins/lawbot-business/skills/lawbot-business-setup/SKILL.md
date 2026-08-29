@@ -9,7 +9,7 @@ description: Onboarding, licentie, pakketten en probleemdiagnose van LawBot Busi
 
 Roep `licentie_status` aan en presenteer het resultaat menselijk: pakket (Lite / Plus /
 Ultra), proefperiode (dagen resterend), verbruik vandaag en de daglimiet, en de beheerlink
-(https://portal.litic.ai/account.html). Het `plan`-veld begint met `business_` — leid het
+(https://lawbot.nl/account). Het `plan`-veld begint met `business_` — leid het
 pakket daaruit af (`business_lite` → Lite, `business_plus` → Plus, `business_ultra` → Ultra).
 
 ## Eerste gebruik — warm welkom
@@ -26,7 +26,7 @@ Toon daarna het keuzemenu uit de kern-skill `lawbot-business`.
 
 **A. Geen of ongeldige sleutel** (`license_invalid` of lege configuratie) — geef GEEN
 juridisch antwoord; toon dit stappenplan:
-1. Ga naar **https://portal.litic.ai** en start de gratis proef van **14 dagen** (geen
+1. Ga naar **https://lawbot.nl/business** en start de gratis proef van **14 dagen** (geen
    creditcard nodig).
 2. Kopieer je licentiesleutel (begint met `lbb_`) — hij wordt één keer getoond.
 3. Op claude.ai/Cowork: verbind de connector en log in via de portal. In Claude Code
@@ -35,7 +35,7 @@ juridisch antwoord; toon dit stappenplan:
 4. Test met: *"Ik heb een klant die een factuur niet betaalt."*
 
 **B. Proef verlopen / betaling mislukt** (`license_expired` / `license_past_due`): gegevens
-blijven bewaard; verlengen of betaalmethode bijwerken via https://portal.litic.ai/account.html —
+blijven bewaard; verlengen of betaalmethode bijwerken via https://lawbot.nl/account —
 daarna werkt alles direct weer.
 
 **C. Daglimiet bereikt** (`rate_limited`): leg uit dat elk pakket een eerlijk-gebruik-limiet
@@ -49,7 +49,7 @@ opnieuw."
 
 LawBot Business heeft drie pakketten, gedifferentieerd op functies (niet op aantallen
 chats). Leg ze uit in ondernemerstaal; noem definitieve prijzen alleen als ze in de
-portal bevestigd zijn (verwijs anders naar portal.litic.ai/business). De actuele
+portal bevestigd zijn (verwijs anders naar lawbot.nl/business). De actuele
 werkstroom-lijst per pakket komt uit de `werkstroom`-tool.
 
 | | **Lite** | **Plus** | **Ultra** |
@@ -68,7 +68,7 @@ branchebriefing) worden gefaseerd uitgerold — de `werkstroom`-tool meldt dat e
 
 **Pakket-meldingen:** probeert de gebruiker iets buiten het pakket, dan geeft de server
 een nette melding met het vereiste pakket. Leg die vriendelijk uit (upgraden kan via
-https://portal.litic.ai/account en is direct actief) en help verder met wat wél kan —
+https://lawbot.nl/account en is direct actief) en help verder met wat wél kan —
 blokkeer nooit bot.
 
 ## Verhouding tot LawBot Pro

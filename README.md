@@ -5,7 +5,7 @@ Installatie in Claude: **Customize → Plugins** (tabblad Cowork) → **+** →
 
 | Plugin | Omschrijving |
 |---|---|
-| **[LawBot Business](plugins/lawbot-business/)** | Juridische assistent voor MKB-ondernemers: eerlijke triage (wanneer heb je een advocaat nodig?) en advocaat-klare dossiervoorbereiding — zaak-intake, dossieropbouw, brieven & sommaties, contract-/voorwaardencheck. Op officiële Nederlandse bronnen. [Start je gratis proefperiode →](https://portal.litic.ai) |
+| **[LawBot Business](plugins/lawbot-business/)** | Juridische assistent voor MKB-ondernemers: eerlijke triage (wanneer heb je een advocaat nodig?) en advocaat-klare dossiervoorbereiding — zaak-intake, dossieropbouw, brieven & sommaties, contract-/voorwaardencheck. Op officiële Nederlandse bronnen. [Start je gratis proefperiode →](https://lawbot.nl/business) |
 
 Voor advocaten is er de zwaardere variant **LawBot Pro**
 (`anthonyloeff/lawbot-pro-marketplace`). De twee producten sluiten op elkaar aan: het
