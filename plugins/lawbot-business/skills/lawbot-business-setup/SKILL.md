@@ -1,6 +1,6 @@
 ---
 name: lawbot-business-setup
-description: Onboarding, licentie, pakketten en probleemdiagnose van LawBot Business. MOET actief worden bij /lawbot-business:status, "licentie", "sleutel", "proefperiode", "welk pakket", "Lite of Ultra", "abonnement", "opzeggen", "LawBot werkt niet", elke licentiefout uit een tool, en bij het allereerste gebruik van de plugin.
+description: Onboarding, licentie, pakketten en probleemdiagnose van LawBot Business. MOET actief worden bij /lawbot-business:status, "licentie", "sleutel", "proefperiode", "welk pakket", "Lite of Ultra", "abonnement", "opzeggen", "LawBot werkt niet", elke licentiefout uit een tool, "connector", "verbinden", "Connect-knop grijs", ontbrekende LawBot-tools, en bij het allereerste gebruik van de plugin.
 ---
 
 # LawBot Business — setup, licentie & pakketten
@@ -29,9 +29,8 @@ juridisch antwoord; toon dit stappenplan:
 1. Ga naar **https://lawbot.nl/business** en start de gratis proef van **14 dagen** (geen
    creditcard nodig).
 2. Kopieer je licentiesleutel (begint met `lbb_`) — hij wordt één keer getoond.
-3. Op claude.ai/Cowork: verbind de connector en log in via de portal. In Claude Code
-   (terminal): plak de sleutel in de plugin-instellingen (Customize → Plugins → LawBot
-   Business).
+3. In de Claude-app, Cowork of op claude.ai: verbind de connector (zie E) en log in met
+   de sleutel. In Claude Code (terminal): plak de sleutel in de plugin-instellingen.
 4. Test met: *"Ik heb een klant die een factuur niet betaalt."*
 
 **B. Proef verlopen / betaling mislukt** (`license_expired` / `license_past_due`): gegevens
@@ -44,6 +43,18 @@ heeft; morgen weer beschikbaar, of upgraden naar een hoger pakket voor meer ruim
 **D. Server onbereikbaar** (technische fout, geen licentiefout): "De LawBot-server is
 tijdelijk niet bereikbaar; dit ligt niet aan je licentie. Probeer het over enkele minuten
 opnieuw."
+
+**E. Connector niet verbonden** (de LawBot-tools ontbreken, of de gebruiker meldt dat de
+connector "niet verbonden" is of dat de Connect-knop in de plugin grijs blijft) — geef GEEN
+juridisch antwoord uit eigen kennis; toon dit stappenplan:
+1. *Customize → Connectors* → **+** → *Add custom connector*.
+2. Naam `lawbot-business`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp`
+3. Klik op **Connect**, plak op de LawBot-inlogpagina je licentiesleutel (of vraag een
+   inlogcode per e-mail aan) en keer terug naar Claude.
+4. De connector van de plugin staat nu op *Connected*. Begin een nieuw gesprek en test met
+   *"Ik heb een klant die een factuur niet betaalt."*
+Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Dan voegt een beheerder
+de connector met deze URL toe; daarna klikt de gebruiker zelf op Connect.
 
 ## De pakketten
 

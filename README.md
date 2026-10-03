@@ -2,6 +2,8 @@
 
 Installatie in Claude: **Customize → Plugins** (tabblad Cowork) → **+** →
 *Add marketplace* → *Add from a repository* → `anthonyloeff/lawbot-business-marketplace`.
+Verbind daarna de connector via *Customize → Connectors* (zie de
+[installatiestappen](plugins/lawbot-business/README.md#installeren)).
 
 | Plugin | Omschrijving |
 |---|---|
