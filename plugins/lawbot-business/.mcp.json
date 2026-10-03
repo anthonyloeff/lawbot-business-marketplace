@@ -2,7 +2,7 @@
   "mcpServers": {
     "lawbot-business": {
       "type": "http",
-      "url": "https://lawbot-bronnen.litic.ai/functions/v1/business-mcp/mcp",
+      "url": "https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp",
       "headers": {
         "Authorization": "Bearer ${user_config.license_key:-}"
       },
