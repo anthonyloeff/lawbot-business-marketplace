@@ -26,11 +26,11 @@ Toon daarna het keuzemenu uit de kern-skill `lawbot-business`.
 
 **A. Geen of ongeldige sleutel** (`license_invalid` of lege configuratie) — geef GEEN
 juridisch antwoord; toon dit stappenplan:
-1. Ga naar **https://lawbot.nl/business** en start de gratis proef van **14 dagen** (geen
-   creditcard nodig).
+1. Ga naar **https://lawbot.nl/business** en start de gratis proef van **14 dagen** (je
+   legt een betaalmethode vast en betaalt pas na de proef).
 2. Kopieer je licentiesleutel (begint met `lbb_`) — hij wordt één keer getoond.
-3. In de Claude-app, Cowork of op claude.ai: verbind de connector (zie E) en log in met
-   de sleutel. In Claude Code (terminal): plak de sleutel in de plugin-instellingen.
+3. Verbind de connector en log in met de sleutel (zie E). In Claude Code (terminal):
+   `/mcp` → `lawbot-business` → **Authenticate**.
 4. Test met: *"Ik heb een klant die een factuur niet betaalt."*
 
 **B. Proef verlopen / betaling mislukt** (`license_expired` / `license_past_due`): gegevens
@@ -45,16 +45,18 @@ tijdelijk niet bereikbaar; dit ligt niet aan je licentie. Probeer het over enkel
 opnieuw."
 
 **E. Connector niet verbonden** (de LawBot-tools ontbreken, of de gebruiker meldt dat de
-connector "niet verbonden" is of dat de Connect-knop in de plugin grijs blijft) — geef GEEN
-juridisch antwoord uit eigen kennis; toon dit stappenplan:
-1. *Customize → Connectors* → **+** → *Add custom connector*.
-2. Naam `lawbot-business`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp`
-3. Klik op **Connect**, plak op de LawBot-inlogpagina je licentiesleutel (of vraag een
-   inlogcode per e-mail aan) en keer terug naar Claude.
-4. De connector van de plugin staat nu op *Connected*. Begin een nieuw gesprek en test met
-   *"Ik heb een klant die een factuur niet betaalt."*
-Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Dan voegt een beheerder
-de connector met deze URL toe; daarna klikt de gebruiker zelf op Connect.
+connector "niet verbonden" is) — geef GEEN juridisch antwoord uit eigen kennis; toon dit
+stappenplan:
+1. Open *Customize → Plugins → LawBot Business → Connectors* en klik bij `lawbot-business`
+   op **Connect**.
+2. Plak op de LawBot-inlogpagina je licentiesleutel (of vraag een inlogcode per e-mail aan)
+   en keer terug naar Claude.
+3. Begin een nieuw gesprek en test met *"Ik heb een klant die een factuur niet betaalt."*
+Blijft Connect grijs of lukt het niet (bijv. een oudere versie van de plugin)? Werk de
+plugin bij, of voeg zelf een custom connector toe: *Customize → Connectors* → **+** →
+*Add custom connector*, naam `lawbot-business`, URL exact: `https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp` → **Connect** →
+inloggen. Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Dan voegt een
+beheerder de connector met deze URL toe; daarna klikt de gebruiker zelf op Connect.
 
 ## De pakketten
 

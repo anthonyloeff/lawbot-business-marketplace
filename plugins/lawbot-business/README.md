@@ -25,23 +25,25 @@ Daarna:
 
 1. Start je gratis proef van 14 dagen op **https://lawbot.nl/business** en kopieer je
    licentiesleutel (`lbb_…`).
-2. **Connector verbinden:** in Claude → *Customize → Connectors* → **+** →
-   *Add custom connector*, met als naam `lawbot-business` en als URL (exact overnemen, de
-   plugin herkent de connector aan dit adres):
-
-   ```
-   https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp
-   ```
-
-   Klik op **Connect**, plak op de inlogpagina van LawBot je sleutel (of vraag een
-   inlogcode per e-mail aan) en keer terug naar Claude. In de plugin staat de connector
-   daarna op *Connected*.
-   *Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Vraag dan je
-   beheerder de connector met deze URL toe te voegen; daarna klik je zelf op Connect.*
+2. **Verbinden:** open *Customize → Plugins → LawBot Business → Connectors* en klik bij
+   `lawbot-business` op **Connect**. Plak op de inlogpagina van LawBot je sleutel (of vraag
+   een inlogcode per e-mail aan) en keer terug naar Claude. De connector staat daarna op
+   *Connected*.
 3. Test met: *"Ik heb een klant die een factuur niet betaalt."*
 
-**Claude Code (terminal):** plak je `lbb_`-sleutel in de plugin-instellingen; een custom
-connector is daar niet nodig.
+**Lukt Connect niet?** Voeg de connector dan zelf toe: *Customize → Connectors* → **+** →
+*Add custom connector*, naam `lawbot-business`, URL (exact overnemen):
+
+```
+https://fyzocmfqaatpivqjtphh.supabase.co/functions/v1/business-mcp/mcp
+```
+
+Klik op **Connect** en log in zoals hierboven; de plugin neemt deze connector vanzelf over.
+Zie je geen "Add custom connector" (Team- of Enterprise-omgeving)? Vraag dan je beheerder
+de connector met deze URL toe te voegen; daarna klik je zelf op Connect.
+
+**Claude Code (terminal):** typ na de installatie `/mcp`, kies `lawbot-business` en
+**Authenticate**: je browser opent de inlogpagina van LawBot.
 
 ## Voor wie dit niet is
 
